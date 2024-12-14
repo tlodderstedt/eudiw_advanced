@@ -1,0 +1,15 @@
+{
+    "client_id": "x509_san_dns:client.example.org",
+    "response_type": "signature",
+    "redirect_uri": "https://client.example.org/callback",
+    "documentDigests": [
+        {
+            "hashes": "sTOgwOm+474gFj0q0x1iSNspKqbcse4IeiqlDg/HWuI=",
+            "hashAlgorithmOID": "2.16.840.1.101.3.4.2.1",
+            "signature_format": "P",
+            "conformance_level": "AdES-B-T",
+            "signAlgo": "1.2.840.113549.1.1.1",
+            "documentName": "Mobile Subscription"
+        }
+    ]
+}

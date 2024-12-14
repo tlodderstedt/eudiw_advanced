@@ -6,7 +6,7 @@
     participant wallet as "EUDIW"
     participant qscd as "QSCD"
 
-    rp --> user: show document to be signed
+    rp --> user: select document to be signed
     user -> rp: sign with my EUDIW
     note over wallet, rp: CSC (OID4VPish flow)
     rp --> user: Signing Request 

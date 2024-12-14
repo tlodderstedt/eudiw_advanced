@@ -1,0 +1,16 @@
+{
+    "SignatureObject": [
+        "MIAGCSqAMIACAQExDzANBglghkgBZQMEAgEFADCABgkqhkiG…Ss4rEsQV4AAAAAAAAA=="
+    ],
+    "validationInfo": {
+        "ocsp": [
+            "MIIJg...jSc="
+        ],
+        "crl": [
+            "MIIC4...X7M="
+        ]
+ "certificates": [
+            "<Base64-encoded_X.509_certificate>"
+        ]
+    }
+}
