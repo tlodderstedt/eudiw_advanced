@@ -1,0 +1,13 @@
+{
+   "type": "payment_initiation",
+   "instructedAmount": {
+      "currency": "EUR",
+      "amount": "123.50"
+   },
+   "creditorName": "Merchant A",
+   "creditorAccount": {
+      "bic":"ABCIDEFFXXX",
+      "iban": "DE02100100109307118603"
+   },
+   "remittanceInformationUnstructured": "Ref Number Merchant"
+}

@@ -1,0 +1,30 @@
+
+@startuml
+    autonumber
+    participant user as "User Agent"
+    participant rp as "RP as QES Client"
+    participant wallet as "EUDIW"
+    participant qscd as "QSCD"
+
+    rp --> user: show document to be signed
+    user -> rp: sign with my EUDIW
+    note over wallet, rp: CSC (OID4VPish flow)
+    rp --> user: Signing Request 
+    user --> wallet: redirect Siging Request 
+    wallet -> rp: get request object (nonce)
+    rp ->> wallet: request object(signature data)
+    activate wallet
+    wallet ->> user: SHOW approval dialoge
+    user ->> user: review transaction
+    user ->> wallet: approves signature
+    wallet -> qscd: sign
+    qscd -> wallet: signed data
+    wallet -> rp: post Signature Response (CMS object)
+    wallet --> user: redirect to RP
+    user --> rp: redirect to RP
+    deactivate wallet
+  
+    note over user, rp: prepare and show signed document
+    rp -> rp: add CMS object to document
+    rp --> user: show document
+@enduml

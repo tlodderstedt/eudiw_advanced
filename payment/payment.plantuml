@@ -1,0 +1,33 @@
+
+@startuml
+    autonumber
+    participant user as "User Agent"
+    participant psp2 as "TPP aka OAuth Client"
+    participant wallet as "EUDIW"
+    participant psp as "ASPSP aka Issuer"
+
+    note over wallet, psp2: OAuth (OID4VPish flow with an EAAs under the hood)
+    psp2 --> user: Authorization Request 
+    user --> wallet: redirect Authorization Request 
+    wallet -> psp2: get request object (nonce)
+    psp2 ->> wallet: request object(payment initiation, PoP DPoP key)
+    activate wallet
+    wallet ->> user: SHOW approval dialoge
+    user ->> user: review transaction
+    user ->> wallet: approves payment initiaton
+    wallet -> psp2: post Authorization Response(Access Token(P2Pay))
+    wallet --> user
+    user --> psp2
+    deactivate wallet
+  
+    note over psp, psp2: implemented by payment rail 
+    psp2 ->> psp: send payment initiation request (Access Token(P2Pay), PoP for Access Token)
+    psp -->> psp2: receiving P2Pay OK
+
+    psp ->> psp: verify P2Pay and execute transaction
+    loop
+    psp2 -> psp: GET payment-status(payment-id)
+    psp --> psp2: RESP payment-status
+    psp -->> user: SHOW payment status
+    end
+@enduml

@@ -1,0 +1,16 @@
+{
+    "iss": "https://issuer.eudiw.com",
+    "aud": "https://bank.example.com/api",
+    "exp": 1883000000,
+    "nbf": 1718198433,
+    "iat": 1718198433,
+    "a2pay_presentation": "eyJhbGciOiAiRVMy..V0~Wy..ZnBAan5g",
+    "cnf": {
+      "jwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "NASJ2ADuagOvraLf7O4VxcBMbantzL9dd0jpvMLnBfs",
+        "y": "OJY6pqCqRIzpEt78OXasWHGgqV5ZGre_3cHtpNH82gg"
+        }
+    }
+}
