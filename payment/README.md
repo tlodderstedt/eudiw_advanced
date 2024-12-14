@@ -2,7 +2,9 @@ The idea of this design is to leverage the protocol mechanics of OpenID4VP and t
 
 The EUDIW acts as an OAuth Authorization Server and issues a sender-constrained access token, the RP will use to initate a payment with a financial institution.  
 
-The new messages (or rather the message parameters) can be combined with OpenID4VP message parameter, i.e. signature creation could be combined with credential presentation. 
+The new messages (or rather the message parameters) can be combined with OpenID4VP message parameter, i.e. signature creation could be combined with credential presentation.
+
+![Alt text](https://github.com/tlodderstedt/eudiw_advanced/blob/main/out/payment/payment/payment.png "Payment Initiation with the EUDIW")
 
 1. (steps 1-4) The TPP (acting as an OAuth client) sends an authorization request using RAR requesting authorization to request a payment initiation. Technically, this means a redirect from TPP to wallet and the wallet fetching the request object from the request URI. This also allows to do a proof of possession for a DPoP key. 
 2. (step 8) The wallet asks for consents and pushes the access token (containing the EAA presentation) to the TPP using the TPP's response  endpoint.
