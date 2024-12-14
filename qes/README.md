@@ -7,4 +7,4 @@ There are two flavors:
 
 The proposed syntax is based on CSC v2. The new messages (or rather the message parameters) can be combined with OpenID4VP message parameter, i.e. signature creation could be combined with credential presentation. 
 
-Alternatively, CMS CMS objects or digitally signed documents could also be treated as credential in OpenID4VP based on the definition of respective credential formats. This would allow to request and respond with standard OpenID4VP messages. There is an example request and response for the second flavor in this repo. 
+Alternatively, CMS CMS objects or digitally signed documents could also be treated as credential in OpenID4VP based on the definition of respective credential format ("x.509"). This would allow to request and respond with standard OpenID4VP messages. There is an example request and response for the second flavor in this repo. 
