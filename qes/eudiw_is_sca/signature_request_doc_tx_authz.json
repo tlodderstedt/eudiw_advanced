@@ -1,0 +1,27 @@
+{
+    "client_id": "x509_san_dns:client.example.org",
+    "response_type": "signature",
+    "redirect_uri": "https://client.example.org/callback",
+    "dcql_query": {
+        "credentials": [
+            {
+                "id": "my_certificate",
+                "format": "x.509",
+                "meta": {
+                    //policy to select qualified certificate
+                }
+            }
+        ]
+    },
+    "transaction_data": {
+        "type": "qes",
+        "documents": [
+            {
+                "document": "Q2VydGlmaWNhdGVTZXJpYWxOdW1iZ…KzBTWWVJWWZZVXptU3V5MVU9DQo=",
+                "signature_format": "P",
+                "conformance_level": "AdES-B-T",
+                "signAlgo": "1.2.840.113549.1.1.1"
+            }
+        ]
+    }
+}
