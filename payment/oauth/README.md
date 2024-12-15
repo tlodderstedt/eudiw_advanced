@@ -1,5 +1,5 @@
 
-![Alt text](https://github.com/tlodderstedt/eudiw_advanced/blob/main/out/payment/oauth/payment_as_oauth_flow.png "Payment Initiation with the EUDIW")
+![Alt text](https://github.com/tlodderstedt/eudiw_advanced/blob/main/out/payment/oauth/payment_as_oauth_flow/payment_as_oauth_flow.png "Payment Initiation with the EUDIW")
 
 1. (steps 1-4) The TPP (acting as an OAuth client) sends an authorization request using RAR requesting authorization to request a payment initiation. Technically, this means a redirect from TPP to wallet and the wallet fetching the request object from the request URI. This also allows to do a proof of possession for a DPoP key. 
 2. (step 8) The wallet asks for consents and pushes the access token (containing the EAA presentation) to the TPP using the TPP's response  endpoint.
