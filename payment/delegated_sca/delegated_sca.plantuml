@@ -10,7 +10,7 @@
     psp --> user: Presentation Request 
     user --> wallet: redirect Presentation Request 
     wallet -> psp: get request object 
-    psp ->> wallet: request object(dcql_query, transaction_data, present_to_thirdparty(PoP DPoP key))
+    psp ->> wallet: request object(dcql_query, transaction_data, present_to_thirdparty(DPoP key))
     activate wallet
     wallet ->> user: SHOW approval dialoge
     user ->> user: review transaction
