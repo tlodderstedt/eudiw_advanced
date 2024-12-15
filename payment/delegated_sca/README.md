@@ -92,7 +92,7 @@ The parameter `present_to_thirdparty` contains the additional data and indicates
 * `credential_id` identifies the requested credentials, the RP wants to present to a third party. 
 * `dpop_key` is the public key the credential presentation (used as access token) shall be bound to. 
 
-Note: the `present_to_thirdparty' function MAY be combined with transaction data. 
+Note: the `present_to_thirdparty` function MAY be combined with transaction data. 
 
 The wallet would need to know that the respective credential presentation must be wrapped into an access token along with a `cnf` for the DPoP key. Here is an example access token: 
 
