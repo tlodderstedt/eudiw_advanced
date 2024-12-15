@@ -1,0 +1,33 @@
+
+@startuml
+    autonumber
+    participant user as "User Agent"
+    participant psp as "PSP aka OAuth Client"
+    participant wallet as "EUDIW"
+    participant aspsp as "ASPSP as Third Party"
+
+    note over wallet, psp: OID4VP flow with VC presentation (as access token) to third party
+    psp --> user: Presentation Request 
+    user --> wallet: redirect Presentation Request 
+    wallet -> psp: get request object 
+    psp ->> wallet: request object(dcql_query, transaction_data, present_to_thirdparty(PoP DPoP key))
+    activate wallet
+    wallet ->> user: SHOW approval dialoge
+    user ->> user: review transaction
+    user ->> wallet: approves payment initiaton
+    wallet -> psp: post Presentation Response(presentation_submission, vp_token(access token(A2Pay)))
+    wallet --> user: redirect to PSP
+    user --> psp: redirect to PSP
+    deactivate wallet
+  
+    note over psp, aspsp: implemented by payment rail 
+    psp ->> aspsp: send payment initiation request (Access Token(A2Pay), PoP for Access Token)
+    aspsp -->> psp: receiving P2Pay OK
+
+    aspsp ->> aspsp: verify P2Pay and execute transaction
+    loop
+    psp -> aspsp: GET payment-status(payment-id)
+    aspsp --> psp: RESP payment-status
+    aspsp -->> user: SHOW payment status
+    end
+@enduml

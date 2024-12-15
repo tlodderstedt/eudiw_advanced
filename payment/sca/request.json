@@ -1,0 +1,63 @@
+{
+  "client_id": "x509_san_dns:client.bank.com",
+  "response_type": "vp_token",
+  "redirect_uri": "https://client.bank.com/callback",
+  "nonce":"n-0S6_WzA2Mj",
+  "dcql_query": {
+    "credentials": [
+      {
+        "id": "A2Pay",
+        "format": "dc+sd-jwt",
+        "meta": {
+          "vct_values": [
+            "https://credentials.example.com/a2pay"
+          ]
+        },
+        "claims": [
+          {
+            "path": [
+              "id"
+            ]
+          },
+          {
+            "path": [
+              "payment-product"
+            ]
+          },
+          {
+            "path": [
+              "payment-uri"
+            ]
+          },
+          {
+            "path": [
+              "currency"
+            ]
+          },
+          {
+            "path": [
+              "name"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transaction_data": [
+    {
+      "type": "PaymentRequest",
+      "credential_ids": [
+        "A2Pay"
+      ],
+      "transaction_data_hashes_alg": "sha-256",
+      "payment-id": "7D8AC610-566D-3EF0-9C22-186B2A5ED793",
+      "creditor-account": {
+        "iban": "DE75512108001245126199"
+      },
+      "instructed-amount": "15.49",
+      "currency": "EUR",
+      "creditor-name": "Merchant A",
+      "purpose": "Shopping at Merchant A"
+    }
+  ]
+}

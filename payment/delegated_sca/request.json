@@ -1,0 +1,75 @@
+{
+  "client_id": "x509_san_dns:client.psp.org",
+  "response_type": "vp_token",
+  "redirect_uri": "https://client.psp.org/callback",
+  "dcql_query": {
+    "credentials": [
+      {
+        "id": "A2Pay",
+        "format": "dc+sd-jwt",
+        "meta": {
+          "vct_values": [
+            "https://credentials.example.com/a2pay"
+          ]
+        },
+        "claims": [
+          {
+            "path": [
+              "id"
+            ]
+          },
+          {
+            "path": [
+              "payment-product"
+            ]
+          },
+          {
+            "path": [
+              "payment-uri"
+            ]
+          },
+          {
+            "path": [
+              "currency"
+            ]
+          },
+          {
+            "path": [
+              "name"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transaction_data": [
+    {
+      "type": "PaymentRequest",
+      "credential_ids": [
+        "A2Pay"
+      ],
+      "transaction_data_hashes_alg": "sha-256",
+      "payment-id": "7D8AC610-566D-3EF0-9C22-186B2A5ED793",
+      "creditor-account": {
+        "iban": "DE75512108001245126199"
+      },
+      "instructed-amount": "15.49",
+      "currency": "EUR",
+      "creditor-name": "Merchant A",
+      "purpose": "Shopping at Merchant A"
+    }
+  ],
+  "present_to_thirdparty": {
+    "credential_ids": [
+      "A2Pay"
+    ],
+    "dpop_key": {
+      "jwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "NASJ2ADuagOvraLf7O4VxcBMbantzL9dd0jpvMLnBfs",
+        "y": "OJY6pqCqRIzpEt78OXasWHGgqV5ZGre_3cHtpNH82gg"
+      }
+    }
+  }
+}

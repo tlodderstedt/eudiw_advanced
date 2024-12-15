@@ -1,0 +1,14 @@
+{
+    "presentation_submission": {
+        "definition_id": "A2Pay",
+        "id": "a2pay_submission",
+        "descriptor_map": [
+            {
+                "id": "A2Pay",
+                "path": "$",
+                "format": "dc+sd-jwt"
+            }
+        ]
+    },
+    "vp_token": "eyJhbGciOiAiRVMy..V0~Wy..ZnBAan5g"
+}
