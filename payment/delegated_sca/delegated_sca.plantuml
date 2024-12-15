@@ -2,7 +2,7 @@
 @startuml
     autonumber
     participant user as "User Agent"
-    participant psp as "PSP aka OAuth Client"
+    participant psp as "PSP as RP"
     participant wallet as "EUDIW"
     participant aspsp as "ASPSP as Third Party"
 
