@@ -87,10 +87,10 @@ This is an example request for step 4:
 }
 ```
 
-The parameter `present_to_thirdparty' contains the additional data and indicates to the wallet a modified flow. 
+The parameter `present_to_thirdparty` contains the additional data and indicates to the wallet a modified flow. 
 
 * `credential_id` identifies the requested credentials, the RP wants to present to a third party. 
-* `dpop_key' is the public key the credential presentation (used as access token) shall be bound to. 
+* `dpop_key` is the public key the credential presentation (used as access token) shall be bound to. 
 
 Note: the `present_to_thirdparty' function MAY be combined with transaction data. 
 
