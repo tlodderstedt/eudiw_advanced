@@ -103,7 +103,7 @@ The wallet would need to know that the respective credential presentation must b
     "exp": 1883000000,
     "nbf": 1718198433,
     "iat": 1718198433,
-    "a2pay_presentation": "eyJhbGciOiAiRVMy..V0~Wy..ZnBAan5g",
+    "credential_presentation": "eyJhbGciOiAiRVMy..V0~Wy..ZnBAan5g",
     "cnf": {
       "jwk": {
         "kty":"EC",
