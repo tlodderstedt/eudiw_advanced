@@ -16,7 +16,7 @@ This flow can be used for any use case where a RP wants to use a credential from
 * Authorization of a (Qualified) Electronic Signature, where the signature is created with a remote signature creation service
 * Authentication of an app acting on behalf of the user in a messaging system (e.g. Matrix)
 
-![Alt text](https://github.com/tlodderstedt/eudiw_advanced/blob/main/out/payment/delegated_sca/delegated_sca/delegated_sca.png "Payment Initiation with present to 3rd party")
+![Alt text](https://github.com/tlodderstedt/eudiw_advanced/blob/main/out/payment/present_to_thirdparty/present_to_thirdparty_sca/present_to_thirdparty_sca.png "Payment Initiation with present to 3rd party")
 
 1. (steps 1-4) The TPP (acting as OpenID4VP RP) sends a presentation request with transaction data for payment initiation. In addition to the normal flow, it also indicates that the resulting VC presentation shall be used with a third party (the API of the ASPSP/the bank). It also passes a DPoP key, to be used to proof possession when using the VC presentation (as access token) with the payment initation API of the ASPSP. 
 2. (step 8) The wallet asks for consents and pushes the access token (containing the EAA presentation) to the TPP using the TPP's response  endpoint.
