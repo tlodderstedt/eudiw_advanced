@@ -100,6 +100,7 @@ The wallet would need to know that the respective credential presentation must b
 {
     "iss": "https://issuer.eudiw.com",
     "aud": "https://bank.example.com/api",
+    "client_id": "x509_san_dns:client.psp.org",
     "exp": 1883000000,
     "nbf": 1718198433,
     "iat": 1718198433,
