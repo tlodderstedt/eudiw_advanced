@@ -1,21 +1,11 @@
 {
-    "presentation_submission": {
-        "definition_id": "A2Pay",
-        "id": "a2pay_submission",
-        "descriptor_map": [
-            {
-                "id": "A2Pay",
-                "path": "$",
-                "format": "dc+sd-jwt",
-                "to_third_party": true
-            }
-        ]
-    },
     "vp_token": {
-        "nonce":"n-0S6_WzA2Mj",
-        "access_token": eyJhbGciOi...00ifQ.OKOaw...zg.48...3b.5eym8T...QD_A.XFBo...SkQ,
-        "metadata": {
-            "payment-uri": "https://bank.example.com/pay/7dfe5484g78"
+        "A2Pay": {
+            "nonce": "n-0S6_WzA2Mj",
+            "access_token": eyJhbGciOi...00ifQ.OKOaw...zg.48...3b.5eym8T...QD_A.XFBo...SkQ,
+            "metadata": {
+                "payment-uri": "https://bank.example.com/pay/7dfe5484g78"
+            }
         }
     }
 }

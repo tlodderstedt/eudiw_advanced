@@ -1,0 +1,15 @@
+{
+  "type": "PaymentRequest",
+  "credential_ids": [
+    "A2Pay"
+  ],
+  "transaction_data_hashes_alg": "sha-256",
+  "payment-id": "7D8AC610-566D-3EF0-9C22-186B2A5ED793",
+  "creditor-account": {
+    "iban": "DE75512108001245126199"
+  },
+  "instructed-amount": "15.49",
+  "currency": "EUR",
+  "creditor-name": "Merchant A",
+  "purpose": "Shopping at Merchant A"
+}
