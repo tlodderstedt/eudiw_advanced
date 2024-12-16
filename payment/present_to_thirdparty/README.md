@@ -102,7 +102,7 @@ The wallet will ask the user for consent for the transaction and produce the res
 
 Note: Even though the access token uses the JWT-format, this design is intended to work with _any_ credential format. 
 
-This access token is signed with the same key that is used to sign the credential presentation. 
+This access token is signed with the same key that is used to sign the credential presentation. The access token is encrypted with a public key of the bank. This key would need to be determined either from data in the A2Pay credential or through metadata the wallet requests from the bank. 
 
 The access token is returned in the `vp_token` instead of the credential presentation in a structure containing the following claims:
 
