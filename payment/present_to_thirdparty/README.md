@@ -1,7 +1,7 @@
 
 This document describes a design to use the wallet to authorize a payment and to be able to initate this payment through an API call between the RP and a bank (a third party service). 
 
-The basic idea is to use a VC issued by the bank into the holder's wallet along with the transaction data feature of OpenID4VP to authorize the payment. On top of that, the result of the process, the credential presentation, shall be used with the bank to authorize the payment initation API call. To make this a secure process, the credental presentation is wrapped into an access token that is bound to a DPoP key provided by the RP and audience and origin restricted. 
+The basic idea is to use a VC issued by the bank into the holder's wallet along with the transaction data feature of OpenID4VP to authorize the payment. On top of that, the result of the process, the credential presentation, shall be used with the bank to authorize the payment initation API call. To make this a secure process, the credential presentation is wrapped into an access token that is bound to a DPoP key provided by the RP and audience and origin restricted. 
 
 The new option is called "present to 3rd party".
 
