@@ -1,6 +1,6 @@
 {
     "client_id": "x509_san_dns:client.example.org",
-    "response_type": "signature",
+    "response_type": "vp_token",
     "redirect_uri": "https://client.example.org/callback",
     "dcql_query": {
         "credentials": [
