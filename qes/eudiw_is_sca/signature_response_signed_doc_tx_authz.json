@@ -1,14 +1,3 @@
 {
-    "presentation_submission": {
-        "definition_id": "example_pades_document",
-        "id": "example_pades_document_submission",
-        "descriptor_map": [
-            {
-                "id": "my_certificate",
-                "path": "$",
-                "format": "x.509"
-            }
-        ]
-    },
-    "vp_token": "<base64 encoded QES signed PDF file>"
+    "my_certificate": "<base64 encoded QES signed PDF file>"
 }
