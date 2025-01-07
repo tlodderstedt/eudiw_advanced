@@ -1,0 +1,41 @@
+
+@startuml
+    autonumber
+    participant user as "User Agent"
+    participant rp as "RP as QES Client"
+    participant wallet as "EUDIW"
+    participant qscd as "QSCD"
+
+    rp --> user: select document to be signed
+    user -> rp: sign with my EUDIW
+    note over wallet, rp: OID4VP flow w/ transaction data
+    rp --> user: Presentation Request 
+    user --> wallet: redirect Siging Request (client_id, request_url)
+    wallet -> rp: get request object (nonce)
+    note over wallet, rp: this response can be HUGE
+    rp --> wallet: request object(client_id, response_type="vp_token", redirect_uri, \ndcql_query, transaction_data (contains documents to be signed))
+    activate wallet
+    wallet --> user: SHOW document to be signed
+    user --> user: review document
+    user --> wallet: approves signature
+    wallet --> user: select certificate/QTSP
+    user --> wallet: selection
+    wallet ---> user: authorize
+    user --> qscd: authorize
+    note over user, qscd: QSCD authenticates/identifies user, may callback to wallet to obtain\na EAA or PID presentation or perform pseudonymous authentication
+    qscd --> user: authorized
+    user --> wallet: authorized
+    wallet ->> qscd: get token
+    qscd ->> wallet: access token
+    wallet -> qscd: sign (access token)
+    qscd -> wallet: signed data
+    wallet -> wallet: add signature to document
+    note over wallet, rp: this request can be HUGE
+    wallet -> rp: post Presentation Response (vp_token (contains signed documents))
+    wallet --> user: redirect to RP
+    user --> rp: redirect to RP
+    deactivate wallet
+  
+    note over user, rp: show signed document
+    rp --> user: show document
+@enduml

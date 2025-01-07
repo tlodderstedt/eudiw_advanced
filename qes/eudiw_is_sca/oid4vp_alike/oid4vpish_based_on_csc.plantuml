@@ -18,7 +18,16 @@
     wallet ->> user: SHOW document to be signed
     user ->> user: review document
     user ->> wallet: approves signature
-    wallet -> qscd: sign
+     wallet --> user: select certificate/QTSP
+    user --> wallet: selection
+    wallet ---> user: authorize
+    user --> qscd: authorize
+    note over user, qscd: QSCD authenticates/identifies user, may callback to wallet to obtain\na EAA or PID presentation or perform pseudonymous authentication
+    qscd --> user: authorized
+    user --> wallet: authorized
+    wallet ->> qscd: get token
+    qscd ->> wallet: access token
+    wallet -> qscd: sign (access token)
     qscd -> wallet: signed data
     wallet -> wallet: add signature to document
     note over wallet, rp: this request can be HUGE
