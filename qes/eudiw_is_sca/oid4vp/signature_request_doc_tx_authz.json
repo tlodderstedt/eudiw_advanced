@@ -15,6 +15,9 @@
     },
     "transaction_data": {
         "type": "qes",
+        "credential_ids": [
+            "my_certificate"
+        ],
         "documents": [
             {
                 "document": "Q2VydGlmaWNhdGVTZXJpYWxOdW1iZ…KzBTWWVJWWZZVXptU3V5MVU9DQo=",
