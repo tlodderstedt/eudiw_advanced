@@ -14,7 +14,7 @@
         ]
     },
     "transaction_data": {
-        "type": "https://cloudsignatureconsortium.org/2025/signature",
+        "type": "https://cloudsignatureconsortium.org/2025/document-signature",
         "credential_ids": [
             "my_certificate"
         ],
