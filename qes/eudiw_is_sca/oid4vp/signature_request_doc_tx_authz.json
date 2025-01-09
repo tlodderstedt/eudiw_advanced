@@ -6,7 +6,7 @@
         "credentials": [
             {
                 "id": "my_certificate",
-                "format": "x.509",
+                "format": "https://cloudsignatureconsortium.org/2025/x509",
                 "meta": {
                     //policy to select qualified certificate
                 }
@@ -14,7 +14,7 @@
         ]
     },
     "transaction_data": {
-        "type": "qes",
+        "type": "https://cloudsignatureconsortium.org/2025/signature",
         "credential_ids": [
             "my_certificate"
         ],
